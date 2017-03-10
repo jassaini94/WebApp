@@ -1,0 +1,68 @@
+<html ng-app = "WebApp" ng-controller = "MainController">
+	<head>
+		<link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.css"/>
+		<link rel = "stylesheet" href = "app/css/main.css"/>
+ 	</head>
+
+	<body id = "main">
+		<div class = "container" ng-show = "!loggedIn">
+			
+			<h1 id = "t">Express</h1>
+			<img id = "MainDesign" src = "app/img/MainDesign.png">
+
+			<div class = "email">
+				<strong>Email: </strong>
+				<input id = "signupEmail" type = "text" ng-model = "newUser.email" placeholder = "Email Address">
+
+				<strong>Email: </strong>			
+				<input id = "loginEmail" type = "text" ng-model = "login.email" placeholder = "Email Address">
+			</div>
+
+			<div class = "password">
+				<strong>Password: </strong>
+				<input id = "signupPassword" type = "password" ng-model = "newUser.password" placeholder = "Password">
+				
+				<strong>Password: </strong>
+				<input id = "loginPassword" type = "password" ng-model = "login.password" placeholder = "Password">
+			</div>
+
+			<button id = "signupButton" ng-click = "createUser()">Sign Up</button> 
+			<button id = "loginButton" ng-click = "logUserIn()" ui-sref = "home">Login</button>
+			
+		</div>
+
+		<div class = "homeContainer" ng-show = "loggedIn">
+			<div class="heading">
+  				<h1 id = "Logo">Express
+  					<button id = "home" ui-sref = "home">Home</button>
+  					<button id = "editProfile" ui-sref = "editProfile">Edit Profile</button>
+  					<button id = "follow" ui-sref = "follow">Follow Users</button>
+  					<button id = "logOut" ng-click = "logOut()">Log Out</button>
+  				</h1>
+  			</div>
+
+  			<div ng-show = "homePage"></div>
+  			<div ng-show = "editingProfile"></div>
+  			<div ng-show = "followPage"></div>
+
+
+		<div ui-view></div>
+	</body>
+
+	<script src = "node_modules/angular/angular.js"></script>
+	<script src = "node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src = "app/app.js"></script>
+
+	<!-- Controllers -->
+	<script src = 'app/controllers/main-controller.js'></script>
+	<script src = 'app/home/home-controller.js'></script>
+	<script src = 'app/profile/edit-profile-controller.js'></script>
+	<script src = 'app/follow/follow-controller.js'></script>
+
+	<!-- Libraries -->
+	<script src = "node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+	<script src = "node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
+	<script src = "node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+
+	
+</html>

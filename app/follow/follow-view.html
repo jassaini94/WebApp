@@ -1,0 +1,19 @@
+<html ng-app = 'WebApp' ng-controller = 'FollowController' ng-show = "followPage">
+
+	<head>
+		<link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.css"/>
+		<link rel = "stylesheet" href = "app/css/main.css"/>
+	</head>
+
+	<body>
+			<h1>Users</h1>
+			<ul>
+				<li id = "followers" ng-repeat = "expresser in users" ng-show = "user._id !== expresser._id"> 
+					{{expresser.email}} 
+					<button id = "followButton"  ng-hide = "checkIsFollowing(expresser._id)" ng-click = "follow(user._id, expresser._id)">Follow</button>
+					<button id = "unfollowButton"  ng-show = "checkIsFollowing(expresser._id)" ng-click = "unfollow(user._id, expresser._id)">Unfollow</button>
+				</li>
+			</ul>
+	</body>
+
+</html>

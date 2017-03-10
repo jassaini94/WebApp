@@ -1,0 +1,39 @@
+<html ng-app = "WebApp" ng-controller = "HomeController" ng-show = "homePage">
+	<head>
+		<link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.css"/>
+		<link rel = "stylesheet" href = "app/css/main.css"/>
+	</head>
+
+	<body>
+		<div class = "expressions">
+			<textarea id = "expressionForm" ng-model = "newExpression" placeholder = "Post Expression...Then Press Enter"></textarea>
+			<button id = "postExpressionButton" ng-click = "sendExpression()">Express</button>
+		</div>
+
+		<div class = "allExpressions">
+			<table>
+				<tr ng-repeat = "expression in expressions">
+					<td>
+					<div>
+						<image ng-src = "{{expression.userImage}}">
+					</div>
+						<div class = 'userExpression'>
+						{{expression.user}}
+						</div>
+					</td>
+
+					<td>
+						<p> {{expression.content}}</p>
+
+						<div class = "expressionDate">
+							{{expression.date | date: 'MM/dd/yyyy hh:mm'}}
+						</div>
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+
+</html>

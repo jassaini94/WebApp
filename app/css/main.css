@@ -1,0 +1,258 @@
+/* Basic Elements */
+
+body /* Blue Background */
+{
+	background-color: #3de4fe;
+}
+
+h1 /* Express Title */
+{
+	font-family: cursive; 
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 40px;
+	text-align: center;
+}
+
+.container /* White Container */
+{
+	background-color: white;
+	margin-top: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 200px;
+	width: 700px;
+	height: 465px; 
+	border-radius: 15px;
+
+}
+
+.homeContainer /* Logged In White Container */
+{
+	background-color: white;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	min-height: 100%;
+	height: auto; 
+	border-radius: 7px;
+}
+
+#MainDesign /* Express Picture */
+{
+	margin-left: 135px;
+	margin-right: 130px;
+	margin-bottom: 10px;
+
+	height: 260px;
+	width: 400px;
+}
+
+/* Login Boxes and Buttons on SignUp Screen */
+.email 
+{
+	margin-top: 10px;
+	margin-left: 29px;
+}
+
+#signupEmail
+{
+	margin-right: 229px;
+}
+
+#signupPassword
+{
+	margin-top: 10px;
+	margin-right: 200px;
+}
+
+#signupButton
+{
+	margin-top: 10px;
+	margin-left: 75px;
+	margin-right: 360px;
+}
+
+/* Logged In Screens */
+.heading
+{
+	
+  	margin: 40px 0 10px;
+  	border-bottom: 1px solid #eee;
+}
+
+#logo
+{
+	text-align: left;
+	margin-left: 20px;
+	padding-top: 10px;
+}
+
+#home
+{
+	margin-left: 300px;
+	font-family: Times sans-serif;
+	font-size: 17px;
+	vertical-align: center;
+
+}
+
+#editProfile
+{
+	font-family: times sans-serif;
+	font-size: 17px;
+	vertical-align: center;
+}
+
+#follow
+{
+	font-family: times sans-serif;
+	font-size: 17px;
+	vertical-align: center;
+}
+
+#logOut
+{
+	font-family: times sans-serif;
+	font-size: 17px;
+	vertical-align: center;
+}
+
+/* Edit Profile Screen */
+.editing
+{
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+.userImage
+{
+	margin-bottom: 10px;
+}
+
+#uploadButton
+{
+	margin-left: 15px;
+}
+
+.userName
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#updateUsername
+{
+	margin-left: 5px;
+}
+
+#usernameBox
+{
+	margin-left: 10px;
+}
+
+.userBio
+{
+	margin-top: 10px;
+}
+
+#updateBio
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#userBio
+{
+	width: 700px;
+	height: 200px;
+}
+
+/* Logout Screen */
+.loggingOut
+{
+	margin-top: 20px;
+	margin-left: 50px;
+	font-size: 15px;
+}
+
+#loggingOutButton
+{
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+/* Home Screen */
+.expressions
+{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+#expressionForm
+{
+	width: 700px;
+	height: 50px;
+}
+
+#postExpressionButton
+{
+	width: 80px;
+	height: 40px;
+	vertical-align: 20px;
+	margin-left: 10px;
+}
+
+.allExpressions
+{
+	
+	margin-bottom: 10px;
+}
+
+.allExpressions img
+{
+	margin-left: 50px;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 2px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.userExpression
+{
+	margin-left: 60px;
+}
+
+.allExpressions p
+{
+	vertical-align: top;
+}
+
+.expressionDate
+{
+	vertical-align: center;
+}
+
+/* Follow Screen */
+
+#followers
+{
+	margin-bottom: 10px;
+}
+
+#followButton
+{
+	margin-left: 10px;
+	height: 24px;
+}
+
+#unfollowButton
+{
+	margin-left: 10px;
+	height: 24px;
+}
+

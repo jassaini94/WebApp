@@ -1,0 +1,30 @@
+<html ng-app = "WebApp" ng-controller = "EditProfileController" ng-show = "editingProfile">
+	<head>
+		<link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.css"/>
+		<link rel = "stylesheet" href = "app/css/main.css"/>
+	</head>
+
+	<body>
+		<div class = "editing">
+			<div class = "userImage">
+			<strong>Profile Image: </strong><button id = "uploadButton">
+				<div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 400, height: 300}">Upload Image</div>
+			</button>
+			</div>
+		
+			<div class = "userName">
+				<strong>Username:</strong>
+				<input id = "usernameBox" type = "text" ng-model = "user.username" placeholder = "Username">
+				<button id = "updateUsername" ng-click = "updateUsername()">Update</button>
+			</div>
+
+			<strong>Biography:</strong>
+			<div class = "userBio">
+				<textarea id = "userBio" type = "text" ng-model = "user.bio" placeholder = "Express yourself..."></textarea>
+  			</div>
+
+  			<button id = "updateBio" ng-click = "updateBio()">Update</button>
+  		</div>
+	</body>
+
+</html>
