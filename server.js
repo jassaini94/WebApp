@@ -49,8 +49,8 @@ app.get('/api/users/get', usersController.getUsers);
 app.post('/api/users/follow', usersController.followUser);
 
 
-//Application listening on Port 3000//
-app.listen('3000', function()
+//Application listening//
+app.listen('process.env.PORT || 5000', function()
 {
-	console.log("App listening on Port: 3000");
+	console.log("App Listening");
 });
