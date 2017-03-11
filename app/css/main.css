@@ -51,29 +51,50 @@ h1 /* Express Title */
 }
 
 /* Login Boxes and Buttons on SignUp Screen */
+
+.email, #signupEmail, #loginEmail, #signupPassword, #loginPassword, #signupButton, #loginButton (display: block)
+
 .email 
 {
 	margin-top: 10px;
-	margin-left: 29px;
+	margin-left: 59px;
 }
 
 #signupEmail
 {
-	margin-right: 229px;
+	margin-left: 30px;
+	margin-right: 170px;
+}
+
+#loginEmail
+{
+	margin-left: 30px;
+	margin-right: 10px;
 }
 
 #signupPassword
 {
 	margin-top: 10px;
-	margin-right: 200px;
+	margin-right: 170px;
+}
+
+#loginPassword
+{
+	margin-right: 10px;
 }
 
 #signupButton
 {
 	margin-top: 10px;
 	margin-left: 75px;
-	margin-right: 360px;
+	margin-right: 330px;
 }
+
+#loginButton
+{
+	margin-right: 10px;
+}
+
 
 /* Logged In Screens */
 .heading
