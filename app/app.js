@@ -8,7 +8,7 @@
 				.state('main', 
 				{
 					url: '/',
-					templateUrl: 'index.html',
+					templateUrl: 'app/main/main-view.html',
 					controller: 'MainController'
 				})
 

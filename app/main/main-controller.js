@@ -3,6 +3,9 @@
 	angular.module('WebApp')
 			.controller('MainController', ['$scope', '$state', '$http', function($scope, $state, $http)
 			{
+
+				document.title = 'Express';
+
 				$scope.createUser = function()
 				{
 					document.getElementById("signupEmail").value = "";
