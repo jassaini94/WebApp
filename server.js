@@ -28,7 +28,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 //Set Landing Page//
 app.get('/', function(req, res)
 {
-	res.sendFile('index.html');
+	res.sendfile('index.html');
 });
 
 //Authentication//
