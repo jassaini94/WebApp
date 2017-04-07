@@ -15,7 +15,7 @@
 
 					$http.post('api/user/signup', $scope.newUser).success(function(res)
 					{
-						return res.send(200);
+				
 					})
 					.error(function(error)
 					{

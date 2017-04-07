@@ -35,8 +35,6 @@ describe('Authentication', function()
 		this.driver.findElement(By.id('signupEmail')).sendKeys('test@test.com');
 		this.driver.findElement(By.id('signupPassword')).sendKeys('test');
 		this.driver.findElement(By.id('signupButton')).click();
-		
-		return expect(200);
 	});
 
 });
