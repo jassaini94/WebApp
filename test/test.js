@@ -17,27 +17,29 @@ before(function()
 	return this.driver.get('http://jaspal-webapp.herokuapp.com/');
 });
 
-after(function()
+/*after(function()
 {
 	return this.driver.quit();
-});
+});*/
 
 describe('Authentication', function()
 {
-	it('Sign Up', function()
+	it('Title', function()
 	{
-		/*
-		driver.findElement(By.id('email')).sendKeys('****');
-		driver.findElement(By.id('pass')).sendKeys('*****');
-		driver.findElement(By.id('loginbutton')).click();
-		*/
-		
 		return expect(this.driver.getTitle()).to.eventually.contain('Express');
 	}, 5000);
 
+	it('Sign Up', function()
+	{
+
+		this.driver.findElement(By.id('signupEmail')).sendKeys('test@test.com');
+		this.driver.findElement(By.id('signupPassword')).sendKeys('test');
+		this.driver.findElement(By.id('signupButton')).click();
+		
+		return expect(200);
+	});
+
 });
-
-
 
 
 
