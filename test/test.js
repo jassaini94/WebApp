@@ -1,28 +1,45 @@
 var webdriver = require('selenium-webdriver');
-
 var chromedriver = require('chromedriver');
 var geckodriver = require('geckodriver');
-
 var By = require('selenium-webdriver').By;
 var until = require('selenium-webdriver').until;
+var chai = require('chai');
 
-//Open Chrome//
-var driver = new webdriver.Builder().forBrowser('chrome').build();
+chai.use(require('chai-as-promised'));
+expect = chai.expect;
 
-//Maximize Browser Size//
-driver.manage().window().maximize();
+before(function()
+{
+	this.timeout(10000);
+	this.driver = new webdriver.Builder().forBrowser('chrome').build();
+	this.driver.manage().window().maximize();
+	this.driver.manage().deleteAllCookies();
+	return this.driver.get('http://jaspal-webapp.herokuapp.com/');
+});
 
-//Delete all Cookies//
-driver.manage().deleteAllCookies();
+after(function()
+{
+	return this.driver.quit();
+});
 
-//Navigate to Website//
-driver.get('http://jaspal-webapp.herokuapp.com/');
+describe('Authentication', function()
+{
+	it('Sign Up', function()
+	{
+		/*
+		driver.findElement(By.id('email')).sendKeys('****');
+		driver.findElement(By.id('pass')).sendKeys('*****');
+		driver.findElement(By.id('loginbutton')).click();
+		*/
+		
+		return expect(this.driver.getTitle()).to.eventually.contain('Express');
+	}, 5000);
 
-/*
-driver.findElement(By.id('email')).sendKeys('****');
-driver.findElement(By.id('pass')).sendKeys('*****');
-driver.findElement(By.id('loginbutton')).click();
-*/
+});
+
+
+
+
 
 //Close Browser//
 //driver.quit();
