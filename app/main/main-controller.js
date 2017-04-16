@@ -13,9 +13,9 @@
 
 					console.log($scope.newUser);
 
-					$http.post('api/user/signup', $scope.newUser).success(function(res)
+					$http.post('api/user/signup', $scope.newUser).success(function(req, res)
 					{
-				
+						console.log(res);
 					})
 					.error(function(error)
 					{
@@ -43,6 +43,7 @@
 					{
 						localStorage.setItem('User-Data', JSON.stringify(res));
 						$scope.loggedIn = true;
+
 					})
 					.error(function(error)
 					{

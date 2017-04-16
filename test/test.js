@@ -1,45 +1,36 @@
+'use strict'
+
 var webdriver = require('selenium-webdriver');
 var chromedriver = require('chromedriver');
-var geckodriver = require('geckodriver');
-var By = require('selenium-webdriver').By;
-var until = require('selenium-webdriver').until;
+var By = webdriver.By;
+var until = webdriver.until;
+var test = require('selenium-webdriver/testing');
+
+var assert = require('assert');
 var chai = require('chai');
+var chaiHttp = require('chai-http');
+var expect = chai.expect;
 
-chai.use(require('chai-as-promised'));
-expect = chai.expect;
+chai.use(chaiHttp);
 
-before(function()
+//chai.should();
+
+var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+
+driver.get('http://jaspal-webapp.herokuapp.com/');
+driver.get('http://jaspal-webapp.herokuapp.com/');
+
+test.describe('Authentication',function()
 {
-	this.timeout(10000);
-	this.driver = new webdriver.Builder().forBrowser('chrome').build();
-	this.driver.manage().window().maximize();
-	this.driver.manage().deleteAllCookies();
-	return this.driver.get('http://jaspal-webapp.herokuapp.com/');
-});
-
-/*after(function()
-{
-	return this.driver.quit();
-});*/
-
-describe('Authentication', function()
-{
-	it('Title', function()
+	test.it('Sign Up', function()
 	{
-		return expect(this.driver.getTitle()).to.eventually.contain('Express');
-	}, 5000);
-
-	it('Sign Up', function()
-	{
-
-		this.driver.findElement(By.id('signupEmail')).sendKeys('test@test.com');
-		this.driver.findElement(By.id('signupPassword')).sendKeys('test');
-		this.driver.findElement(By.id('signupButton')).click();
+		driver.findElement(webdriver.By.id('signupEmail')).sendKeys('test@test.com');
+		driver.findElement(webdriver.By.id('signupPassword')).sendKeys('test@test.com');
+		driver.findElement(webdriver.By.id('signupButton')).click();
 	});
-
-});
-
+})
 
 
-//Close Browser//
-//driver.quit();
+
+
+
