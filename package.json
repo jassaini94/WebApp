@@ -1,7 +1,12 @@
 {
   "name": "WebApp",
   "version": "0.0.1",
-  "dependencies": {
+  "enginers": 
+  {
+    "node": "8.0.0"
+  }
+  "dependencies": 
+  {
     "angular": "^1.4.7",
     "angular-ui-router": "^0.4.2",
     "body-parser": "^1.15.2",
